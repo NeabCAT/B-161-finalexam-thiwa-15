@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Move();
+        Jump();
+        IsffectActive();
+
     }
 
     void Update()
@@ -31,21 +35,24 @@ public class Player : MonoBehaviour
     }
 
     //set movespeed
-    public void SetMoveSpeed(float value)
+    public void SetMoveSpeed(float newSpeed)
     {
-        moveSpeed += value;
+        moveSpeed += newSpeed;
+        Debug.Log($"Player : Speed {moveSpeed}");
     }
 
     //set super jump
-    public void SetSuperJump(float value)
+    public void SetSuperJump(float newJump)
     {
-        jumpForce += value;
+        jumpForce += newJump;
+        Debug.Log($"Player : Jump {jumpForce}");
     }
 
     //set Invulerability
-    public void SetInvulnerability(bool value)
+    public void SetInvulnerability(bool isEnabled)
     {
-        IsEffectActive = value ;
+        IsEffectActive = isEnabled;
+        Debug.Log($"Player : IsffectActive {IsEffectActive}");
     }
 
     //use item
@@ -59,6 +66,21 @@ public class Player : MonoBehaviour
 
 
         }
+    }
+
+    public void Move()
+    {
+        Debug.Log($"Player : {moveSpeed}");
+    }
+
+    public void Jump()
+    {
+        Debug.Log($"Player : {jumpForce}");
+    }
+
+    public void IsffectActive()
+    {
+        Debug.Log($"Player : IsffectActive {IsEffectActive}");
     }
 
 }

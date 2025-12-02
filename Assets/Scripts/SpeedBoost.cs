@@ -6,7 +6,7 @@ public class SpeedBoost : PowerUpBase
     {
         if (player == true)
         {
-            player.SetMoveSpeed(20);
+            player.SetMoveSpeed(12);
             Destroy(this.gameObject);
         }
     }
