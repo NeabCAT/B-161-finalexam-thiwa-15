@@ -656,7 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   moveSpeed: 5
   jumpForce: 10
-  IsEffectActive: 1
+  IsEffectActive: 0
 --- !u!1001 &1798131673077308989
 PrefabInstance:
   m_ObjectHideFlags: 0

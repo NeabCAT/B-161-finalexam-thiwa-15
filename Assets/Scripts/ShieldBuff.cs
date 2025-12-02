@@ -6,8 +6,8 @@ public class ShieldBuff : PowerUpBase
     {
         if (player == true)
         {
-            player.SetMoveSpeed(20);
-            Destroy(this);
+            player.SetInvulnerability(true);
+            Destroy(this.gameObject);
         }
     }
 }

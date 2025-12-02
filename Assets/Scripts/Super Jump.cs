@@ -6,8 +6,8 @@ public class SuperJump : PowerUpBase
     {
         if (player == true)
         {
-            player.SetSuperJump(10);
-            Destroy(this);
+            player.SetSuperJump(3);
+            Destroy(this.gameObject);
         }
     }
 }

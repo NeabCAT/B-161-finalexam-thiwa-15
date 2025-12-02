@@ -30,29 +30,34 @@ public class Player : MonoBehaviour
         }
     }
 
+    //set movespeed
     public void SetMoveSpeed(float value)
     {
         moveSpeed += value;
     }
 
+    //set super jump
     public void SetSuperJump(float value)
     {
         jumpForce += value;
     }
 
+    //set Invulerability
     public void SetInvulnerability(bool value)
     {
-        IsEffectActive = true ;
+        IsEffectActive = value ;
     }
 
+    //use item
     public void OnTriggerEnter2D(Collider2D other)
     {
        PowerUpBase Item = other.GetComponent<PowerUpBase>();
 
        if (other == true)
         {
-           
-            
+            Item.ApplyEffect(this);
+
+
         }
     }
 
