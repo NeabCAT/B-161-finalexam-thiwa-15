@@ -4,6 +4,10 @@ public class SuperJump : PowerUpBase
 {
     public override void ApplyEffect(Player player)
     {
-        throw new System.NotImplementedException();
+        if (player == true)
+        {
+            player.SetSuperJump(10);
+            Destroy(this);
+        }
     }
 }

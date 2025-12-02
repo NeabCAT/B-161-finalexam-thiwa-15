@@ -3,9 +3,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    private float moveSpeed = 5f;
-    private float jumpForce = 10f;
+    [field : SerializeField] private float moveSpeed = 5f;
+    [field : SerializeField] private float jumpForce = 10f;
 
+    [field : SerializeField] private bool IsEffectActive = false;
 
     private Rigidbody2D rb;
 
@@ -28,4 +29,31 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }
+
+    public void SetMoveSpeed(float value)
+    {
+        moveSpeed += value;
+    }
+
+    public void SetSuperJump(float value)
+    {
+        jumpForce += value;
+    }
+
+    public void SetInvulnerability(bool value)
+    {
+        IsEffectActive = true ;
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+       PowerUpBase Item = other.GetComponent<PowerUpBase>();
+
+       if (other == true)
+        {
+           
+            
+        }
+    }
+
 }

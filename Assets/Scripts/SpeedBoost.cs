@@ -4,6 +4,10 @@ public class SpeedBoost : PowerUpBase
 {
     public override void ApplyEffect(Player player)
     {
-        throw new System.NotImplementedException();
+        if (player == true)
+        {
+            player.SetMoveSpeed(20);
+            Destroy(this);
+        }
     }
 }
