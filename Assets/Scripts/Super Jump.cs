@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShieldBuff : PowerUpBase
+public class SuperJump : PowerUpBase
 {
     public override void ApplyEffect(Player player)
     {
