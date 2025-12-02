@@ -70,12 +70,12 @@ public class Player : MonoBehaviour
 
     public void Move()
     {
-        Debug.Log($"Player : {moveSpeed}");
+        Debug.Log($"Player : Speed {moveSpeed}");
     }
 
     public void Jump()
     {
-        Debug.Log($"Player : {jumpForce}");
+        Debug.Log($"Player : Jump {jumpForce}");
     }
 
     public void IsffectActive()
